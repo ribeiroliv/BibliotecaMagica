@@ -91,9 +91,9 @@ int main(int argc, char *argv[]){
     int op=0;
 
     do {
-        printf("BEM VINDO A BIBLIOTECA MÁGIGA!")
+        printf("\n\nBEM VINDO A BIBLIOTECA MAGIGA!\n\n");
         printf("1. Cadastrar Livro\n2. Deletar Livro\n3. Mostrar Livro\n4. Editar Livro\n5. Listar Titulos dos Livros\n6. Sair\n");
-        printf("Escolha uma opcao: ");
+        printf("\nEscolha uma opcao: ");
 
         scanf("%d", &op);
         getchar();
