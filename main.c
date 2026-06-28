@@ -2,6 +2,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+#define TAM 100
+
 struct Data {
     int dia;
     int mes;
@@ -18,9 +20,7 @@ struct LivroMagico {
     char titulo[200];
     struct Autor autor;
     struct Data data_escrita;
-}; 
-
-#define TAM 100
+};
 
 void inicializarVetor(struct LivroMagico **biblioteca){
     int i;
