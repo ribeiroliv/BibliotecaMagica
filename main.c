@@ -18,4 +18,4 @@ struct LivroMagico {
     char titulo[200];
     struct Autor autor;
     struct Data data_escrita;
-};
+}; 
