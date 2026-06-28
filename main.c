@@ -19,3 +19,22 @@ struct LivroMagico {
     struct Autor autor;
     struct Data data_escrita;
 }; 
+
+#define TAM 100
+
+void inicializarVetor(struct LivroMagico **biblioteca[TAM]){
+    int i;
+    for (i=0; i<100; i++){
+        biblioteca[i]=NULL;
+    }
+}
+
+int main(){
+
+    struct LivroMagico *biblioteca[TAM];
+
+    inicializarVetor(biblioteca);
+
+
+    return 0;
+}
