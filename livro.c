@@ -69,6 +69,7 @@ void deletarLivro(livroMagico **biblioteca, int id) {
 	if(encontrouLivro != 0) {
 		free(biblioteca[i]);
 		biblioteca[i] = NULL;
+		printf("Livro deletado da biblioteca com sucesso!\n");
 	} else {
 		printf("Não há livro a ser deletado!\n");
 	}
