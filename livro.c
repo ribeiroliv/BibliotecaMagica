@@ -1,5 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "estruturas.h"
+
+#define TAM 100
 /*Essa função auxilia na busca dos livros por id*/
-livroMagico * buscaId(struct livroMagico **biblioteca, int id) {
+LivroMagico * buscaId( LivroMagico **biblioteca, int id) {
 	int i;
 	for(i = 0; i < TAM; i++) {
 		if(biblioteca[i] != NULL) {
@@ -14,8 +20,8 @@ livroMagico * buscaId(struct livroMagico **biblioteca, int id) {
 }
 
 /*Essa função implementa busca e exibição do livro por ID*/
-void mostrarLivro(struct livroMagico **biblioteca, int id) {
-	struct livroMagico *livro = buscaId(biblioteca, id);
+void mostrarLivro(LivroMagico **biblioteca, int id) {
+	LivroMagico *livro = buscaId(biblioteca, id);
 
 	if(livro != NULL) {
 		printf("ID: %d\n", livro->id);
@@ -28,7 +34,7 @@ void mostrarLivro(struct livroMagico **biblioteca, int id) {
 }
 
 /*Essa função imprime a lista de todos os livros da biblioteca e seus respectivos IDs*/
-void listarTitulos(struct livroMagico **biblioteca) {
+void listarTitulos( LivroMagico **biblioteca) {
 	int i;
 	int bibliotecaVazia = 0;
 

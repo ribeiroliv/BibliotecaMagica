@@ -1,35 +1,22 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include "estruturas.h"
+#include "livro.h"
+#include "arquivo.h"
 
 #define TAM 100
 
-struct Data {
-    int dia;
-    int mes;
-    int ano;
-}; 
 
-struct Autor {
-    char nome[128];
-    struct Data data_nascimento;
-};
 
-struct LivroMagico { 
-    unsigned int ID; 
-    char titulo[200];
-    struct Autor autor;
-    struct Data data_escrita;
-};
-
-void inicializarVetor(struct LivroMagico **biblioteca){
+void inicializarVetor(LivroMagico **biblioteca){
     int i;
     for (i=0; i<100; i++){
         biblioteca[i]=NULL;
     }
 }
 
-void cadastrarLivro(struct LivroMagico **biblioteca) {
+void cadastrarLivro(LivroMagico **biblioteca) {
     int i;
     int flag = 0;
 
@@ -37,10 +24,10 @@ void cadastrarLivro(struct LivroMagico **biblioteca) {
         if (biblioteca[i] == NULL) {
             flag = 1;
 
-            biblioteca[i] = (struct LivroMagico*) malloc(sizeof(struct LivroMagico)); 
+            biblioteca[i] = ( LivroMagico*) malloc(sizeof( LivroMagico)); 
 
             printf("Digite o ID do livro: ");
-            scanf("%u", &biblioteca[i]->ID);
+            scanf("%u", &biblioteca[i]->id);
             getchar(); 
 
             printf("Digite o titulo do livro: ");
@@ -84,7 +71,7 @@ int main(int argc, char *argv[]){
         return 1;
     }
 
-    struct LivroMagico *biblioteca[TAM];
+   LivroMagico *biblioteca[TAM];
 
     inicializarVetor(biblioteca);
 
