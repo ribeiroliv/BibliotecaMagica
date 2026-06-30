@@ -28,7 +28,7 @@ void mostrarLivro(LivroMagico **biblioteca, int id) {
 		printf("ID: %d\n", livro->id);
 		printf("Titulo: %s\n", livro->titulo);
 		printf("Autor: %s\n", livro->autor.nome);
-		printf("Data de Nascimento do Autor: %d/%d/%d\n", livro->data_nascimento.dia, livro->data_nascimento.mes, livro->data_nascimento.ano);
+		printf("Data de Nascimento do Autor: %d/%d/%d\n", livro->autor.data_nascimento.dia, livro->autor.data_nascimento.mes, livro->autor.data_nascimento.ano);
 		printf("Data de Publicacao: %d/%d/%d\n", livro->data_escrita.dia, livro->data_escrita.mes, livro->data_escrita.ano);	
 	} else {
 		printf("Livro nao encontrado!\n");
@@ -86,7 +86,7 @@ void editarLivro(LivroMagico **biblioteca, int id) {
 		printf("ID: %d\n", livro->id);
 		printf("Titulo: %s\n", livro->titulo);
 		printf("Autor: %s\n", livro->autor.nome);
-		printf("Data de Nascimento do Autor: %d/%d/%d\n", livro->autor.data_nascimento.dia, livro->autor.data_nascimento.mes, livro->data_nascimento.ano);
+		printf("Data de Nascimento do Autor: %d/%d/%d\n", livro->autor.data_nascimento.dia, livro->autor.data_nascimento.mes, livro->autor.data_nascimento.ano);
 		printf("Data de Publicacao: %d/%d/%d\n", livro->data_escrita.dia, livro->data_escrita.mes, livro->data_escrita.ano);
 
 		printf("\n");
@@ -136,16 +136,16 @@ void editarLivro(LivroMagico **biblioteca, int id) {
 		} 
 
 		if(campoSelecionado == 4) {
-			printf("Data de nascimento do Autor: %d/%d/%d\n", livro->data_nascimento.dia, livro->data_nascimento.mes, livro->data_nascimento.ano);
+			printf("Data de nascimento do Autor: %d/%d/%d\n", livro->autor.data_nascimento.dia, livro->autor.data_nascimento.mes, livro->autor.data_nascimento.ano);
 
 			printf("\n");
 
 			printf("Digite a nova Data de nascimento do Autor:\n");
-			scanf("%d/%d/%d", &livro->data_nascimento.dia, &livro->data_nascimento.mes, &livro->data_nascimento.ano);
+			scanf("%d/%d/%d", &livro->autor.data_nascimento.dia, &livro->autor.data_nascimento.mes, &livro->autor.data_nascimento.ano);
 
 			printf("Data de nascimento do Autor editada com sucesso!\n");
 			printf("%d. %s\n", livro->id, livro->titulo);
-			printf("Data de Nascimento do Autor: %d/%d/%d\n", livro->data_nascimento.dia, livro->data_nascimento.mes, livro->data_nascimento.ano);
+			printf("Data de Nascimento do Autor: %d/%d/%d\n", livro->autor.data_nascimento.dia, livro->autor.data_nascimento.mes, livro->autor.data_nascimento.ano);
 		} 
 
 		if(campoSelecionado == 5) {
@@ -189,12 +189,12 @@ void editarLivro(LivroMagico **biblioteca, int id) {
 
 			printf("\n");
 
-			printf("Data de nascimento do Autor: %d/%d/%d\n", livro->data_nascimento.dia, livro->data_nascimento.mes, livro->data_nascimento.ano);
+			printf("Data de nascimento do Autor: %d/%d/%d\n", livro->autor.data_nascimento.dia, livro->autor.data_nascimento.mes, livro->autor.data_nascimento.ano);
 
 			printf("\n");
 
 			printf("Digite a nova Data de nascimento do Autor:\n");
-			scanf("%d/%d/%d", &livro->data_nascimento.dia, &livro->data_nascimento.mes, &livro->data_nascimento.ano);
+			scanf("%d/%d/%d", &livro->autor.data_nascimento.dia, &livro->autor.data_nascimento.mes, &livro->autor.data_nascimento.ano);
 
 			printf("\n");
 
@@ -214,7 +214,7 @@ void editarLivro(LivroMagico **biblioteca, int id) {
 			printf("ID: %d\n", livro->id);
 			printf("Titulo: %s\n", livro->titulo);
 			printf("Autor: %s\n", livro->autor.nome);
-			printf("Data de Nascimento do Autor: %d/%d/%d\n", livro->data_nascimento.dia, livro->data_nascimento.mes, livro->data_nascimento.ano);
+			printf("Data de Nascimento do Autor: %d/%d/%d\n", livro->autor.data_nascimento.dia, livro->autor.data_nascimento.mes, livro->autor.data_nascimento.ano);
 			printf("Data de Publicacao: %d/%d/%d\n", livro->data_escrita.dia, livro->data_escrita.mes, livro->data_escrita.ano);
 		} 
 	}
