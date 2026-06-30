@@ -53,7 +53,7 @@ void listarTitulos(LivroMagico **biblioteca) {
 }
 
 /*Essa função deleta um livro da biblioteca*/
-void deletarLivro(livroMagico **biblioteca, int id) {
+void deletarLivro(LivroMagico **biblioteca, int id) {
 	int i;
 	int encontrouLivro = 0;
 
@@ -77,8 +77,8 @@ void deletarLivro(livroMagico **biblioteca, int id) {
 }
 
 /*Essa função busca o livro pelo ID e permite ao usuário reescrever os seus atributos*/
-void editarLivro(livroMagico **biblioteca, int id) {
-	struct livroMagico *livro = buscaId(biblioteca, id);
+void editarLivro(LivroMagico **biblioteca, int id) {
+	LivroMagico *livro = buscaId(biblioteca, id);
 	int campoSelecionado;
 
 	if(livro != NULL) {
@@ -86,7 +86,7 @@ void editarLivro(livroMagico **biblioteca, int id) {
 		printf("ID: %d\n", livro->id);
 		printf("Titulo: %s\n", livro->titulo);
 		printf("Autor: %s\n", livro->autor.nome);
-		printf("Data de Nascimento do Autor: %d/%d/%d\n", livro->data_nascimento.dia, livro->data_nascimento.mes, livro->data_nascimento.ano);
+		printf("Data de Nascimento do Autor: %d/%d/%d\n", livro->autor.data_nascimento.dia, livro->autor.data_nascimento.mes, livro->data_nascimento.ano);
 		printf("Data de Publicacao: %d/%d/%d\n", livro->data_escrita.dia, livro->data_escrita.mes, livro->data_escrita.ano);
 
 		printf("\n");
