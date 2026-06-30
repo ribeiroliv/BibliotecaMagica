@@ -6,8 +6,6 @@
 
 #define TAM 100
 
-
-
 void inicializarVetor(LivroMagico **biblioteca){
     int i;
     for (i=0; i<100; i++){
