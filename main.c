@@ -35,20 +35,12 @@ void cadastrarLivro(LivroMagico **biblioteca) {
             scanf("%127[^\n]", biblioteca[i]->autor.nome);
             getchar(); 
 
-            printf("Digite o dia de nascimento do autor: ");
-            scanf("%d", &biblioteca[i]->autor.data_nascimento.dia);
-            printf("Digite o mes de nascimento do autor: ");
-            scanf("%d", &biblioteca[i]->autor.data_nascimento.mes);
-            printf("Digite o ano de nascimento do autor: ");
-            scanf("%d", &biblioteca[i]->autor.data_nascimento.ano);
+            printf("Digite a data de nascimento do autor: ");
+            scanf("%d%d%d", &biblioteca[i]->autor.data_nascimento.dia, &biblioteca[i]->autor.data_nascimento.mes, &biblioteca[i]->autor.data_nascimento.ano);
             getchar(); 
 
-            printf("Digite o dia em que o livro foi escrito: ");
-            scanf("%d", &biblioteca[i]->data_escrita.dia);
-            printf("Digite o mes em que o livro foi escrito: ");
-            scanf("%d", &biblioteca[i]->data_escrita.mes);
-            printf("Digite o ano em que o livro foi escrito: ");
-            scanf("%d", &biblioteca[i]->data_escrita.ano);
+            printf("Digite a data em que o livro foi publicado: ");
+            scanf("%d%d%d", &biblioteca[i]->data_escrita.dia, &biblioteca[i]->data_escrita.mes, &biblioteca[i]->data_escrita.ano);
             getchar(); 
 
             printf("\nLivro cadastrado com sucesso no slot %d!\n", i);
@@ -73,6 +65,7 @@ int main(int argc, char *argv[]){
     inicializarVetor(biblioteca);
 
     int op=0;
+    int id=0;
 
     do {
         printf("\n\nBEM VINDO A BIBLIOTECA MAGIGA!\n\n");
@@ -89,20 +82,28 @@ int main(int argc, char *argv[]){
                 break;
             case 2:
                 printf("\nDeletar Livro...\n");
+                printf("Digite o ID do livro que deseja deletar: ");
+                scanf("%d", &id);
+                getchar();
+                deletarLivro(biblioteca, id);
                 break;
             case 3:
                 printf("\nMostrar Livro...\n");
                 printf("Digite o ID do livro que deseja visualizar: ");
-                int id;
                 scanf("%d", &id);
                 getchar();
                 mostrarLivro(biblioteca, id);
                 break;
             case 4:
                 printf("\nEditar Livro...\n");
+                 printf("Digite o ID do livro que deseja editar: ");
+                scanf("%d", &id);
+                getchar();
+                editarLivro(biblioteca, id);
                 break;
             case 5:
                 printf("\nListar Titulos dos Livros...\n");
+                listarTitulos(biblioteca);
                 break;
             case 6:
                 printf("\nFechando... Ate a proxima aventura!\n");
