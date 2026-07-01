@@ -36,11 +36,11 @@ void cadastrarLivro(LivroMagico **biblioteca) {
             getchar(); 
 
             printf("Digite a data de nascimento do autor: ");
-            scanf("%d%d%d", &biblioteca[i]->autor.data_nascimento.dia, &biblioteca[i]->autor.data_nascimento.mes, &biblioteca[i]->autor.data_nascimento.ano);
+            scanf("%d/%d/%d", &biblioteca[i]->autor.data_nascimento.dia, &biblioteca[i]->autor.data_nascimento.mes, &biblioteca[i]->autor.data_nascimento.ano);
             getchar(); 
 
             printf("Digite a data em que o livro foi publicado: ");
-            scanf("%d%d%d", &biblioteca[i]->data_escrita.dia, &biblioteca[i]->data_escrita.mes, &biblioteca[i]->data_escrita.ano);
+            scanf("%d/%d/%d", &biblioteca[i]->data_escrita.dia, &biblioteca[i]->data_escrita.mes, &biblioteca[i]->data_escrita.ano);
             getchar(); 
 
             printf("\nLivro cadastrado com sucesso no slot %d!\n", i+1);
