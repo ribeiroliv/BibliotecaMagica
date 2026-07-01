@@ -48,7 +48,7 @@ void listarTitulos(LivroMagico **biblioteca) {
 	}
 
 	if(bibliotecaVazia == 0) {
-		printf("Ainda não ha livros nessa biblioteca!\n");
+		printf("Ainda nao ha livros nessa biblioteca!\n");
 	}
 }
 

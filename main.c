@@ -43,7 +43,7 @@ void cadastrarLivro(LivroMagico **biblioteca) {
             scanf("%d%d%d", &biblioteca[i]->data_escrita.dia, &biblioteca[i]->data_escrita.mes, &biblioteca[i]->data_escrita.ano);
             getchar(); 
 
-            printf("\nLivro cadastrado com sucesso no slot %d!\n", i);
+            printf("\nLivro cadastrado com sucesso no slot %d!\n", i+1);
             break; 
         }
     }
