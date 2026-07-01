@@ -42,13 +42,13 @@ void listarTitulos(LivroMagico **biblioteca) {
 
 	for(i = 0; i < TAM; i++) {
 		if(biblioteca[i] != NULL) {
-			printf("%d. %s\n", biblioteca[i]->id, biblioteca[i]->titulo);
+			printf("%d - %d. %s\n", i+1, biblioteca[i]->id, biblioteca[i]->titulo);
 			bibliotecaVazia++;
 		}
 	}
 
 	if(bibliotecaVazia == 0) {
-		printf("Ainda não há livros nessa biblioteca!\n");
+		printf("Ainda não ha livros nessa biblioteca!\n");
 	}
 }
 
@@ -71,7 +71,7 @@ void deletarLivro(LivroMagico **biblioteca, int id) {
 		biblioteca[i] = NULL;
 		printf("Livro deletado da biblioteca com sucesso!\n");
 	} else {
-		printf("Não há livro a ser deletado!\n");
+		printf("Não ha livro a ser deletado!\n");
 	}
 	
 }
@@ -141,7 +141,7 @@ void editarLivro(LivroMagico **biblioteca, int id) {
 			printf("\n");
 
 			printf("Digite a nova Data de nascimento do Autor:\n");
-			scanf("%d/%d/%d", &livro->autor.data_nascimento.dia, &livro->autor.data_nascimento.mes, &livro->autor.data_nascimento.ano);
+			scanf("%d%d%d", &livro->autor.data_nascimento.dia, &livro->autor.data_nascimento.mes, &livro->autor.data_nascimento.ano);
 
 			printf("Data de nascimento do Autor editada com sucesso!\n");
 			printf("%d. %s\n", livro->id, livro->titulo);
@@ -154,7 +154,7 @@ void editarLivro(LivroMagico **biblioteca, int id) {
 			printf("\n");
 
 			printf("Digite a nova Data de publicacao:\n");
-			scanf("%d/%d/%d", &livro->data_escrita.dia, &livro->data_escrita.mes, &livro->data_escrita.ano);
+			scanf("%d%d%d", &livro->data_escrita.dia, &livro->data_escrita.mes, &livro->data_escrita.ano);
 
 			printf("Data de publicacao editada com sucesso!\n");
 			printf("%d. %s\n", livro->id, livro->titulo);
@@ -194,7 +194,7 @@ void editarLivro(LivroMagico **biblioteca, int id) {
 			printf("\n");
 
 			printf("Digite a nova Data de nascimento do Autor:\n");
-			scanf("%d/%d/%d", &livro->autor.data_nascimento.dia, &livro->autor.data_nascimento.mes, &livro->autor.data_nascimento.ano);
+			scanf("%d%d%d", &livro->autor.data_nascimento.dia, &livro->autor.data_nascimento.mes, &livro->autor.data_nascimento.ano);
 
 			printf("\n");
 
@@ -203,7 +203,7 @@ void editarLivro(LivroMagico **biblioteca, int id) {
 			printf("\n");
 
 			printf("Digite a nova Data de publicacao:\n");
-			scanf("%d/%d/%d", &livro->data_escrita.dia, &livro->data_escrita.mes, &livro->data_escrita.ano);
+			scanf("%d%d%d", &livro->data_escrita.dia, &livro->data_escrita.mes, &livro->data_escrita.ano);
 
 			printf("\n");
 
