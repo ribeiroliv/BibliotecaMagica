@@ -63,6 +63,7 @@ int main(int argc, char *argv[]){
    LivroMagico *biblioteca[TAM];
 
     inicializarVetor(biblioteca);
+    carregarBiblioteca(biblioteca, argv[1]);
 
     int op=0;
     int id=0;
@@ -107,6 +108,7 @@ int main(int argc, char *argv[]){
                 break;
             case 6:
                 printf("\nFechando... Ate a proxima aventura!\n");
+                salvarBiblioteca(biblioteca, argv[1]);
                 break;
             default:
                 printf("\nOpcao invalida! Escolha uma opcao de 1 a 6.\n");

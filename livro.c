@@ -42,7 +42,7 @@ void listarTitulos(LivroMagico **biblioteca) {
 
 	for(i = 0; i < TAM; i++) {
 		if(biblioteca[i] != NULL) {
-			printf("%d - %d. %s\n", i+1, biblioteca[i]->id, biblioteca[i]->titulo);
+			printf("%d - ID: %d. Titulo: %s\n", i+1, biblioteca[i]->id, biblioteca[i]->titulo);
 			bibliotecaVazia++;
 		}
 	}
