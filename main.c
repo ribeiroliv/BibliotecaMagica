@@ -92,7 +92,7 @@ int main(int argc, char *argv[]){
                 break;
             case 3:
                 printf("\nMostrar Livro...\n");
-                printf("Digite o ID do livro que deseja mostrar: ");
+                printf("Digite o ID do livro que deseja visualizar: ");
                 int id;
                 scanf("%d", &id);
                 getchar();
